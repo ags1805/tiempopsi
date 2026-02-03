@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lic. Giuliana Casas | Psicóloga</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="Documentos/logoTiempoPSI.jpeg" alt="Tiempo Psi" class="logo" />
+
+        <nav class="navbar">
+            <a href="index.html#inicio" class="nav-link">Inicio</a>
+            <a href="#contacto" class="nav-link">Comenzá terapia</a>
+            <a href="" class="nav-link">Recursos</a>
+            <a href="" class="nav-link">Unite a nuestra red</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1 id="inicio">Giuliana Casas Lic. en Psicología</h1>
+        </section>
+
+        <section class="bio">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy Giuliana Casas, licenciada en Psicología, egresada de la UBA.
+                Mi recorrido profesional se fue construyendo en el trabajo clínico y en la formación continua, con
+                especial interés en la clínica con adolescentes, la crianza respetuosa y la salud perinatal.
+            </p>
+            <p>
+                Trabajo desde un enfoque psicoanalítico integrativo, incorporando una perspectiva de género y de
+                derechos humanos, entendiendo que los malestares no se producen en el vacío, sino en contextos
+                vinculares, sociales y culturales concretos.
+            </p>
+            <p>
+                Concibo el espacio terapéutico como un lugar de escucha, cuidado y elaboración, donde cada proceso es
+                singular y requiere tiempo, palabra y acompañamiento respetuoso.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <h2 id="contacto">Contáctanos</h2>
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="field">
+                    <label>Nombre y apellido</label>
+                    <input type="text" name="nombre" required />
+                </div>
+
+                <div class="field">
+                    <label>Edad</label>
+                    <input type="number" name="edad" required />
+                </div>
+
+                <div class="field">
+                    <label>Breve motivo de consulta</label>
+                    <textarea name="motivo" rows="3" required></textarea>
+                </div>
+
+                <fieldset>
+                    <legend>Tipo de consulta</legend>
+                    <label><input type="radio" name="tipo" required> Orientación a padres</label>
+                    <label><input type="radio" name="tipo"> Orientación vocacional</label>
+                    <label><input type="radio" name="tipo"> Terapia adolescente</label>
+                    <label><input type="radio" name="tipo"> Terapia adulto</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Modalidad de atención</legend>
+                    <label><input type="radio" name="modalidad" required> Presencial</label>
+                    <label><input type="radio" name="modalidad"> Online</label>
+                </fieldset>
+
+                <fieldset id="horario-group">
+                    <legend>Franja horaria de preferencia</legend>
+                    <label><input type="checkbox" name="horario" value="Miércoles por la mañana"> Miércoles por la
+                        mañana</label>
+                    <label><input type="checkbox" name="horario" value="Miércoles por la tarde"> Miércoles por la
+                        tarde</label>
+                    <label><input type="checkbox" name="horario" value="Jueves por la mañana"> Jueves por la
+                        mañana</label>
+                    <label><input type="checkbox" name="horario" value="Jueves por la tarde"> Jueves por la
+                        tarde</label>
+                    <label><input type="checkbox" name="horario" value="Viernes por la mañana"> Viernes por la
+                        mañana</label>
+                    <label><input type="checkbox" name="horario" value="Viernes por la tarde"> Viernes por la
+                        tarde</label>
+
+                    <div class="error-message" id="horario-error">
+                        Seleccioná al menos una franja horaria
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>En caso de no haber disponibilidad inmediata, ¿te guardamos en lista de espera?</legend>
+                    <label><input type="radio" name="espera" required> Sí</label>
+                    <label><input type="radio" name="espera"> No</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿Cómo preferís que me contacte?</legend>
+                    <label><input type="radio" name="contacto" required> WhatsApp</label>
+                    <label><input type="radio" name="contacto"> Email</label>
+                </fieldset>
+
+                <div class="field">
+                    <label>Datos de contacto</label>
+                    <input type="text" name="datosContacto" required />
+                </div>
+
+                <div class="field">
+                    <label>Observaciones</label>
+                    <textarea name="observaciones" rows="2"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" disabled>
+                    Enviar consulta
+                </button>
+
+            </form>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script src="script.js"></script>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
