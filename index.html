@@ -59,7 +59,7 @@
 
                 <div class="field">
                     <label>Edad</label>
-                    <input type="number" name="edad" required />
+                    <input type="number" name="edad" min="12" max="99" required />
                 </div>
 
                 <div class="field">
@@ -69,16 +69,16 @@
 
                 <fieldset>
                     <legend>Tipo de consulta</legend>
-                    <label><input type="radio" name="tipo" required> Orientación a padres</label>
-                    <label><input type="radio" name="tipo"> Orientación vocacional</label>
-                    <label><input type="radio" name="tipo"> Terapia adolescente</label>
-                    <label><input type="radio" name="tipo"> Terapia adulto</label>
+                    <label><input type="radio" name="tipo" value="Orientación a padres" required> Orientación a padres</label>
+                    <label><input type="radio" name="tipo" value="Orientación vocacional"> Orientación vocacional</label>
+                    <label><input type="radio" name="tipo" value="Terapia adolescente"> Terapia adolescente</label>
+                    <label><input type="radio" name="tipo" value="Terapia adulto"> Terapia adulto</label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Modalidad de atención</legend>
-                    <label><input type="radio" name="modalidad" required> Presencial</label>
-                    <label><input type="radio" name="modalidad"> Online</label>
+                    <label><input type="radio" name="modalidad" value="Presencial" required> Presencial</label>
+                    <label><input type="radio" name="modalidad" value="Online"> Online</label>
                 </fieldset>
 
                 <fieldset id="horario-group">
@@ -110,8 +110,8 @@
 
                 <fieldset>
                     <legend>¿Cómo preferís que me contacte?</legend>
-                    <label><input type="radio" name="contacto" required> WhatsApp</label>
-                    <label><input type="radio" name="contacto"> Email</label>
+                    <label><input type="radio" name="contacto" value="WhatsApp" required> WhatsApp</label>
+                    <label><input type="radio" name="contacto" value="Email"> Email</label>
                 </fieldset>
 
                 <div class="field">
