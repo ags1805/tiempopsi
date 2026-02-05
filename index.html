@@ -53,36 +53,41 @@
             <form class="contact-form" id="contactForm">
 
                 <div class="field">
-                    <label>Nombre y apellido</label>
+                    <label>Nombre y apellido *</label>
                     <input type="text" name="nombre" required />
                 </div>
 
                 <div class="field">
-                    <label>Edad</label>
+                    <label>Edad *</label>
                     <input type="number" name="edad" min="12" max="99" required />
+                    <div class="error-message" id="horario-error">
+                        Edad mínima aceptada es de 12 años.
+                    </div>
                 </div>
 
                 <div class="field">
-                    <label>Breve motivo de consulta</label>
+                    <label>Breve motivo de consulta *</label>
                     <textarea name="motivo" rows="3" required></textarea>
                 </div>
 
                 <fieldset>
-                    <legend>Tipo de consulta</legend>
-                    <label><input type="radio" name="tipo" value="Orientación a padres" required> Orientación a padres</label>
-                    <label><input type="radio" name="tipo" value="Orientación vocacional"> Orientación vocacional</label>
+                    <legend>Tipo de consulta *</legend>
+                    <label><input type="radio" name="tipo" value="Orientación a padres" required> Orientación a
+                        padres</label>
+                    <label><input type="radio" name="tipo" value="Orientación vocacional"> Orientación
+                        vocacional</label>
                     <label><input type="radio" name="tipo" value="Terapia adolescente"> Terapia adolescente</label>
                     <label><input type="radio" name="tipo" value="Terapia adulto"> Terapia adulto</label>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Modalidad de atención</legend>
+                    <legend>Modalidad de atención *</legend>
                     <label><input type="radio" name="modalidad" value="Presencial" required> Presencial</label>
                     <label><input type="radio" name="modalidad" value="Online"> Online</label>
                 </fieldset>
 
-                <fieldset id="horario-group">
-                    <legend>Franja horaria de preferencia</legend>
+                <fieldset id="horario-group" data-required="true">
+                    <legend>Franja horaria de preferencia *</legend>
                     <label><input type="checkbox" name="horario" value="Miércoles por la mañana"> Miércoles por la
                         mañana</label>
                     <label><input type="checkbox" name="horario" value="Miércoles por la tarde"> Miércoles por la
@@ -96,26 +101,23 @@
                     <label><input type="checkbox" name="horario" value="Viernes por la tarde"> Viernes por la
                         tarde</label>
 
-                    <div class="error-message" id="horario-error">
-                        Seleccioná al menos una franja horaria
-                    </div>
                 </fieldset>
 
 
-                <fieldset>
-                    <legend>En caso de no haber disponibilidad inmediata, ¿te guardamos en lista de espera?</legend>
+                <fieldset data-required="true">
+                    <legend>En caso de no haber disponibilidad inmediata, ¿te guardamos en lista de espera? *</legend>
                     <label><input type="radio" name="espera" required> Sí</label>
                     <label><input type="radio" name="espera"> No</label>
                 </fieldset>
 
-                <fieldset>
-                    <legend>¿Cómo preferís que me contacte?</legend>
+                <fieldset data-required="true">
+                    <legend>¿Cómo preferís que me contacte? *</legend>
                     <label><input type="radio" name="contacto" value="WhatsApp" required> WhatsApp</label>
                     <label><input type="radio" name="contacto" value="Email"> Email</label>
                 </fieldset>
 
                 <div class="field">
-                    <label>Datos de contacto</label>
+                    <label>Datos de contacto *</label>
                     <input type="text" name="datosContacto" required />
                 </div>
 
@@ -124,9 +126,13 @@
                     <textarea name="observaciones" rows="2"></textarea>
                 </div>
 
-                <button type="submit" id="submitBtn" disabled>
+                <button type="submit" id="submitBtn">
                     Enviar consulta
                 </button>
+
+                <div>
+                    <p>(*) Campo obligatorio</p>
+                </div>
 
             </form>
 
