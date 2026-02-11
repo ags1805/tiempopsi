@@ -317,6 +317,29 @@ button:disabled {
 }
 
 /* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b5a60;
+}
+
+.site-footer a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
    ANIMACIONES
 ========================= */
 
