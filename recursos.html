@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos | Tiempo PSI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="recursos.css" />
+    <link rel="icon" href="Documentos/logoTiempoPSI.jpeg">
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="Documentos/logoTiempoPSI.jpeg" alt="Tiempo Psi" class="logo" />
+
+        <nav class="navbar">
+            <a href="index.html#inicio" class="nav-link">Inicio</a>
+            <a href="index.html#contacto" class="nav-link">Comenzá terapia</a>
+            <a href="recursos.html" class="nav-link">Recursos</a>
+            <a href="" class="nav-link">Unite a nuestra red</a>
+        </nav>
+    </header>
+
+    <section class="recursos">
+        <h1>Recursos terapéuticos</h1>
+        <p class="subtitle">
+            Ebooks y material práctico para aprender y aplicar de verdad.
+        </p>
+
+        <div class="recursos-grid">
+
+            <article class="recurso-card">
+                <div class="recurso-img">
+                    <img src="Documentos/logoTiempoPSI.jpeg" alt="¿Cómo me siento hoy?">
+                </div>
+
+                <div class="recurso-content" data-type="free" data-file="Ebooks/como-me-siento-hoy.pdf">
+                    <h2>¿Cómo me siento hoy?</h2>
+
+                    <p>
+                        Un recurso pensado para utilizar con los más pequeños, tanto en casa como en el consultorio.
+                    </p>
+
+                    <p>
+                        Esta propuesta invita a identificar y nombrar cómo se sienten, favoreciendo la expresión
+                        emocional de una manera simple y accesible.
+                    </p>
+
+                    <div class="recurso-footer">
+                        <span class="precio">Gratis</span>
+
+                        <button class="btn-comprar" data-action="download">
+                            Descargar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recurso-card">
+                <div class="recurso-img">
+                    <img src="Documentos/logoTiempoPSI.jpeg" alt="Ebook Tiempo PSI">
+                </div>
+
+                <div class="recurso-content">
+                    <h2>Proximamente</h2>
+                    <p>
+                        Estamos trabajando en el próximo recurso.
+                    </p>
+
+                    <div class="recurso-footer">
+                        <span class="precio"></span>
+                        <button class="btn-comprar" disabled>
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>  
+ 
+            <article class="recurso-card">
+                <div class="recurso-img">
+                    <img src="Documentos/logoTiempoPSI.jpeg" alt="Ebook Tiempo PSI">
+                </div>
+
+                <div class="recurso-content">
+                    <h2>Proximamente</h2>
+                    <p>
+                        Estamos trabajando en el próximo recurso.
+                    </p>
+
+                    <div class="recurso-footer">
+                        <span class="precio"></span>
+                        <button class="btn-comprar" disabled>
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>  
+
+            <!-- Más ebooks en el futuro -->
+
+        </div>
+    </section>
+
+    <!-- MODAL COMPRA -->
+    <div class="modal-overlay" id="modalCompra">
+        <div class="modal">
+            <button class="modal-close" id="cerrarModal">&times;</button>
+
+            <h2>Finalizar compra</h2>
+            <p class="modal-subtitle">Completá tus datos para continuar</p>
+
+            <form id="formCompra">
+                <div class="field">
+                    <label>Nombre y apellido *</label>
+                    <input type="text" name="nombre" required />
+                </div>
+
+                <div class="field">
+                    <label>Email *</label>
+                    <input type="email" name="email" required />
+                </div>
+
+                <div class="field">
+                    <label>Confirmar email *</label>
+                    <input type="email" name="emailConfirmacion" required />
+                </div>
+
+                <div class="field">
+                    <label>Producto</label>
+                    <input type="text" name="producto" id="productoSeleccionado" readonly />
+                </div>
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn-comprar">
+                        Continuar al pago
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="recursos.js"></script>
+
+</body>
+
+</html>

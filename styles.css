@@ -79,6 +79,32 @@ label {
   margin-bottom: 0.3rem;
 }
 
+/* FORM VALIDACIONES */
+
+.input-error {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 2px rgba(201, 107, 120, 0.25);
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+
+.error {
+  border: 2px solid #c84b4b;
+}
+
+.error-text {
+  color: #c84b4b;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+
+
 /* INPUTS */
 input,
 textarea {
